@@ -1,0 +1,26 @@
+- VScode 写 python 导包错误，解决方法
+```python
+import sys
+sys.path.append('项目的顶层目录')  
+
+from UI.a import A
+from UI.b import B
+
+if __name__ == "__main__":
+    A().say()
+    B().say()
+
+```
+
+- PYQT 设置背景图片
+-- Palatte 方法
+```python
+# from PyQt5 import *
+from PyQt5.QtGui import QPalette, QPixmap, QBrush
+
+# 背景设置部分
+palatte = QPalette()
+palatte.setBrush(QPalette.Background, QBrush(QPixmap("图片地址").scaled(self.width(),self.height())))
+PAY.setPalatte(palatte)
+# PAY 为界面名字
+```
